@@ -1,9 +1,9 @@
 #!/usr/bin/env python
+import tkinter as tk
 from tkinter import font
 
 import rospy
 from geometry_msgs.msg import Twist
-from geometry_msgs.msg import tkinter as tk
 
 
 def key_event(e):
