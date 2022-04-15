@@ -11,7 +11,7 @@ class LightRover():
         self.sub_cmd_vel = rospy.Subscriber(
             'cmd_vel', Twist, self.callback_cmd_vel)
         self.cmd_v, self.cmd_w = 0, 0
-        self.moter = LRMotor()
+        self.motor = LRMotor()
 
     def callback_cmd_vel(self, m):
         self.cmd_v = m.linear.x
