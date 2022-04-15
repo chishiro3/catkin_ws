@@ -1,0 +1,8 @@
+prefix=/home/pi/csp/catkin_ws/install
+
+Name: lightrover_slam
+Description: Description of lightrover_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

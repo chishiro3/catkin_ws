@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/reboot_test.dir/current/samples/reboot_test.c.o  -o /home/pi/csp/catkin_ws/devel/lib/urg_c/reboot_test  -Wl,-rpath,/home/pi/csp/catkin_ws/devel/lib: /home/pi/csp/catkin_ws/devel/lib/libopen_urg_sensor.so /home/pi/csp/catkin_ws/devel/lib/libliburg_c.so -lrt -lm 
