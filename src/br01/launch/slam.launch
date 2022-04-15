@@ -1,0 +1,15 @@
+<launch>
+ <node pkg="br01" name="lightrover" type="lightrover2.py"/> 
+ <node pkg="br01" name="controller" type="controller.py"/> 
+ <node pkg="urg_node" name="urg_node" type="urg_node">
+  <param name="frame_id" value="base_link"/> 
+ </node>
+ <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping"> 
+  <param name="maxUrange" value="4.0"/>
+  <param name="maxRange" value="4.1"/>
+  <param name="map_update_interval" value="5"/>
+  <param name="temporalUpdate" value="1"/> 
+  <param name="delta" value="0.02"/> 
+  <param name="particles" value="100"/>
+ </node>
+</launch>
