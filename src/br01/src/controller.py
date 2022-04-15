@@ -31,7 +31,8 @@ pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 v, w = 0, 0
 
 root = tk.Tk()
-root.geometry('200x50+100+100') root.configure(bg='white')
+root.geometry('200x50+100+100')
+root.configure(bg='white')
 label = tk.Label(root, text='', bg='white', width=100,
                  font=font.Font(size=20), anchor='w')
 label.pack()
