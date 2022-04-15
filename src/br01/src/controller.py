@@ -20,11 +20,12 @@ def key_event(e):
     elif key == 'Return':
         v, w = 0, 0
 
+    label["text"] = f'v:{v:.2f} w:{w:.1f}'
+    twist = Twist()
+    twist.linear.x, twist.angular.z = v, w
+    pub.publish(twist)
 
-label["text"] = f'v:{v:.2f} w:{w:.1f}'
-twist = Twist()
-twist.linear.x, twist.angular.z = v, w
-pub.publish(twist)
+
 rospy.init_node('controller')
 pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 
