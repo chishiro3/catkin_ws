@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="br02" name="lightrover" type="lightrover2.py"/> 
+    <node pkg="br02" name="controller" type="controller.py"/> 
+    <node pkg="urg_node" name="urg_node" type="urg_node">
+      <param name="frame_id" value="laser_link"/> 
+    </node>
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="-0.07 0 0 0 0 0 base_link laser_link 100" />
+</launch>
+  
